@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            background: url(https://kutv.com/resources/media/8f3bac05-080a-462a-b10e-f00b0206723e-originalBlur_AP24137251839130.jpg) no-repeat center center;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- Overlay for closing sidebar -->
+        <div id="overlay" class="background"></div>
+
+        <!-- Secondary Navbar with Sidebar Menu Trigger -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand text-dark fw-bold" id="logo12345" href="#">
+                    <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/olympic-logo-2024.png" alt="">
+                </a>
+
+
+                <ul class="off-links">
+                    <li>
+                        <a href="/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="/games.html">Games</a>
+                    </li>
+                    <li>
+                        <a href="/athlete.html">Athletes</a>
+                    </li>
+                    <li>
+                        <a href="/history.html">History</a>
+                    </li>
+                    <li>
+                        <a href="news.html">News</a>
+                    </li>
+                    <li>
+                        <a href="/aboutus.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex align-items-center bro2">
+                    <button class="btn hbro">
+                        <i class="fa-solid fa-user"> <a href="/signin.html">Sign Up</a> </i>
+                    </button>
+                    <button class="btn hbro">
+                        <i class="fa-solid fa-user"> <a href="/login.html">Login</a> </i>
+                    </button>
+                </div>
+
+
+
+                <!-- Button to trigger the sidebar -->
+                <button class="navbar-toggler nav-btn" type="button" id="sidebarToggleBtn" aria-label="Open sidebar nav-btn">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+
+        <!-- Sidebar Menu -->
+        <div id="sidebar_menu">
+            <!-- Close Button with Icon -->
+            <button class="btn btn-close-sidebar toggle-sidebar">
+                <i class="fa fa-times"></i>
+            </button>
+
+            <div>
+                <div class="header-setting">
+                    <h5>Menu</h5>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" href="athlete.html">Athletes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-signin me-2 hbtn">
+                    <i class="fa-solid fa-user"> <a href="/signin.html">Sign In</a> </i>
+                </button>
+                <button class="btn btn-signup me-2 hbtn">
+                    <i class="fa-solid fa-user"> <a href="/login.html">Login</a> </i>
+                </button>
+            </div>
+        </div> 
+
+
+
+        <!-- Main Content of the Page -->
+        <div id="content"></div>
+    </header>
+
+
+
+    <div class="about">
+        <div class="container about-section">
+            <h2 class="ab-head">About Us</h2>
+            <p class="about-p">
+                Welcome to our Olympics-themed platform! Our mission is to celebrate the spirit of the Olympics, where
+                athletes from around the world come together to showcase their skills, determination, and sportsmanship.
+                The Olympics symbolize unity, excellence, and inspiration, values we deeply cherish and aim to promote.
+            </p>
+            <p class="about-p">
+                Our website provides comprehensive information about the Olympics, including its rich history, iconic
+                moments, and the remarkable athletes who have left an indelible mark on the games. Whether you’re a
+                sports enthusiast, an aspiring athlete, or simply someone who admires the Olympic ideals, you’ll find
+                something here to spark your interest.
+            </p>
+            <h3 class="ab" style="color: black;">Our Goals :</h3>
+            <ul class="about-ul">
+                <li>To educate people about the history and significance of the Olympics.</li>
+                <li>To inspire the next generation of athletes through stories of perseverance and success.</li>
+                <li>To foster a sense of global unity and appreciation for diverse cultures.</li>
+            </ul>
+            <h3 style="color: black;">Meet Our Legends</h3>
+            <div class="row team">
+                <div class="col-md-4 text-center ab-leg">
+                    <img src="https://th.bing.com/th/id/OIP.yCO6k7DfsmVi-_5kBsw_ogAAAA?rs=1&pid=ImgDetMain"
+                        alt="Team Member" class="img-fluid">
+                    <h5>Pierre de Coubertin</h5>
+                    <p>Founder of Olympics</p>
+                </div>
+                <div class="col-md-4 text-center ab-leg">
+                    <img src="https://th.bing.com/th/id/OIP.HUX2zIzHgiLSEmWobpBfbgHaHa?rs=1&pid=ImgDetMain"
+                        alt="Team Member" class="img-fluid">
+                    <h5> Juan Antonio Samaranch</h5>
+                    <p>IOC President(1980-2001)</p>
+                </div>
+                <div class="col-md-4 text-center ab-leg">
+                    <img src="https://img.olympicchannel.com/images/image/private/t_social_share_thumb/f_auto/primary/aohmx8ttaxp1g01xrca5"
+                        alt="Team Member" class="img-fluid">
+                    <h5> Thomas Bach</h5>
+                    <p>IOC President(Current)</p>
+                </div>
+            </div>
+            <h3 style="color: black;">Contact Us</h3>
+            <p class="about-p">
+                If you have any questions, suggestions, or feedback, feel free to reach out to us. Visit our <a
+                    href="contact_us_page.html" class="contact-link">Contact Us <i class="fa"
+                        aria-hidden="true"></i></a> page. <br> Together, let's celebrate
+                the Olympic spirit and inspire greatness!
+            </p>
+        </div>
+    </div>
+    <footer id="footer" style="background-color: var(--heading-color);">
+        <div class="container">
+            <div class="row">
+                <!-- Olympic Games Section -->
+                <div class="footer-section col-lg-3 col-md-3 col-6 mb-4">
+                    <h3>Olympic Games</h3>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="news.html">Replays & Highlights</a></li>
+                        <li><a href="games.html">All Olympic Games</a></li>
+                    </ul>
+                </div>
+
+                <!-- Olympic Section -->
+                <div class="footer-section col-lg-3 col-md-3 col-6 mb-4">
+                    <h3>Olympic</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com/@Olympics">TV Channel</a></li>
+                        <li><a href="https://www.youtube.com/live/xWJ1RPtwr9U?si=7ksHdFEzCg0RLWBZ">Live Events</a></li>
+                        <li><a href="https://olympics.com/en/original-series/">Original Series</a></li>
+                        <li><a href="https://olympics.com/ioc/overview">Corporate</a></li>
+                    </ul>
+                </div>
+
+                <!-- News Section -->
+                <div class="footer-section col-lg-3 col-md-3 col-6 mb-4">
+                    <h3>About Athletes</h3>
+                    <ul>
+                        <li><a
+                                href="https://youtube.com/playlist?list=PL-292yfpAFGbGPmGWakhNjPBrd90sH9tG&si=f8YnbpaEsMuMhleF">Podcast</a>
+                        </li>
+                        <li><a
+                                href="https://youtube.com/playlist?list=PL-292yfpAFGaEvWiemgUYaJ0wX_n7l6Br&si=uc4VCSG4QFGDftCc">Anthems</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Explore Section -->
+                <div class="footer-section col-lg-3 col-md-3 col-6 mb-4">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="athlete.html">Athletes</a></li>
+                        <li><a href="games">Sports</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <!-- App Links Section -->
+                <div>
+                    <a href="#"><img
+                            src="https://cdn.freebiesupply.com/logos/thumbs/2x/available-on-the-app-store-logo.png"
+                            alt="Apple Store"></a>
+                    <a href="#"><img
+                            src="https://static.wikia.nocookie.net/pbs-kids-sprout-tv/images/d/db/Share_google_play_logo.png"
+                            alt="Google Play"></a>
+                </div>
+
+                <!-- Legal Links Section -->
+                <div class="mb-3">
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Cookie Settings</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+
+                <!-- Social Icons Section -->
+                <div class="social-icons">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                    <a href="#" class="fab fa-tiktok"></a>
+                    <a href="#" class="fab fa-youtube"></a>
+                    <a href="#" class="fab fa-snapchat"></a>
+                    <a href="#" class="fab fa-vk"></a>
+                    <a href="#" class="fab fa-weibo"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>

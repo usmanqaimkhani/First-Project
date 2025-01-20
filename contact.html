@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <style>
+        .ath-main{
+            background: url(https://kutv.com/resources/media/8f3bac05-080a-462a-b10e-f00b0206723e-originalBlur_AP24137251839130.jpg) no-repeat center center;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+            background-size: cover;
+        }
+    </style>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "Fy5JEFcjMC0IgGU9Z",
+            });
+        })();
+    </script>
+</head> 
+
+<body class="about ath-main">
+    <header>
+        <!-- Overlay for closing sidebar -->
+        <div id="overlay" class="background"></div>
+
+        <!-- Secondary Navbar with Sidebar Menu Trigger -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand text-dark fw-bold" id="logo12345" href="#">
+                    <img src="https://colorlib.com/wp/wp-content/uploads/sites/2/olympic-logo-2024.png" alt="">
+                </a>
+
+                <ul class="off-links">
+                    <li>
+                        <a href="/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="/games.html">Games</a>
+                    </li>
+                    <li>
+                        <a href="/athlete.html">Athletes</a>
+                    </li>
+                    <li>
+                        <a href="/history.html">History</a>
+                    </li>
+                    <li>
+                        <a href="news.html">News</a>
+                    </li>
+                    <li>
+                        <a href="/aboutus.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+          
+                <div class="d-flex align-items-center bro2">
+                    <button class="btn hbro">
+                        <i class="fa-solid fa-user"> <a href="/signin.html">Sign Up</a> </i>
+                    </button>
+                    <button class="btn hbro">
+                        <i class="fa-solid fa-user"> <a href="/login.html">Login</a> </i>
+                    </button>
+                </div>
+
+
+
+                <!-- Button to trigger the sidebar -->
+                <button class="navbar-toggler nav-btn" type="button" id="sidebarToggleBtn" aria-label="Open sidebar">
+                    <span class="navbar-toggler-icon nav-btn"></span>
+                </button>
+            </div>
+        </nav>
+
+
+        <!-- Sidebar Menu -->
+        <div id="sidebar_menu">
+            <!-- Close Button with Icon -->
+            <button class="btn btn-close-sidebar toggle-sidebar">
+                <i class="fa fa-times"></i>
+            </button>
+
+            <div>
+                <div class="header-setting">
+                    <h5>Menu</h5>
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                        <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" href="athlete.html">Athletes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-signin me-2 hbtn">
+                    <i class="fa-solid fa-user"> <a href="/signin.html">Sign In</a> </i>
+                </button>
+                <button class="btn btn-signup me-2 hbtn">
+                    <i class="fa-solid fa-user"> <a href="/login.html">Login</a> </i>
+                </button>
+            </div>
+        </div>
+
+
+
+        <!-- Main Content of the Page -->
+        <div id="content"></div>
+    </header>
+    <hr class="hhr">
+    <div class="container contact-section">
+        <div class="row">
+            <!-- Form Section -->
+            <div class="col-md-6 col-sm-12">
+                <h2 class="contact cf one-2">Contact Us</h2>
+                <form id="contactForm" novalidate>
+                    <div class="mb-3 con">
+                        <label for="name" class="form-label">Name :</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required
+                            pattern="^[a-zA-Z\s]+$" title="Please enter a valid name (letters and spaces only).">
+                        <div class="invalid-feedback">Please enter a valid name (letters and spaces only).</div>
+                    </div>
+                    <div class="mb-3 con">
+                        <label for="email" class="form-label">Email :</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="mb-3 con">
+                        <label for="message" class="form-label">Message :</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message"
+                            required></textarea>
+                        <div class="invalid-feedback">Message must be between 10 and 500 characters.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary con-btn" onclick="sendMail()">Submit</button>
+                </form>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="col-md-6 col-sm-12 faq-section con-2">
+                <h2 class="cf one-2">FAQs</h2>
+                <div class="accordion" id="faqAccordion con-2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1Header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                What is the Olympics?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1Header"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Olympics is an international multi-sport event held every four years.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2Header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                How can I participate in the Olympics?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2Header"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Athletes qualify through their respective sports' qualification criteria.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3Header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Where can I watch the Olympics?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3Header"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Olympics is broadcast on various television networks and streaming platforms.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4Header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                How do countries win medals?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4Header"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Medals are awarded based on athletes' performances in their events.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq5Header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                What are the Olympic rings?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5Header"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Olympic rings represent the five continents and symbolize global unity.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq6Header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                                How often are the Olympics held?
+                            </button>
+                        </h2>
+                        <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6Header"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                The Summer and Winter Olympics are held every four years, alternating every two years.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="hhr">
+    <footer id="footer" style="background-color: var(--heading-color);">
+        <div class="container">
+            <div class="row">
+                <!-- Olympic Games Section -->
+                <div class="footer-section col-lg-3 col-md-3 col-6 mb-4">
+                    <h3>Olympic Games</h3>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="news.html">Replays & Highlights</a></li>
+                        <li><a href="games.html">All Olympic Games</a></li>
+                    </ul>
+                </div>
+
+                <!-- Olympic Section -->
+                <div class="footer-section col-lg-3 col-md-3 col-6 mb-4">
+                    <h3>Olympic</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com/@Olympics">TV Channel</a></li>
+                        <li><a href="https://www.youtube.com/live/xWJ1RPtwr9U?si=7ksHdFEzCg0RLWBZ">Live Events</a></li>
+                        <li><a href="https://olympics.com/en/original-series/">Original Series</a></li>
+                        <li><a href="https://olympics.com/ioc/overview">Corporate</a></li>
+                    </ul>
+                </div>
+
+                <!-- News Section -->
+                <div class="footer-section col-lg-3 col-md-3 col-6 mb-4">
+                    <h3>About Athletes</h3>
+                    <ul>
+                        <li><a
+                                href="https://youtube.com/playlist?list=PL-292yfpAFGbGPmGWakhNjPBrd90sH9tG&si=f8YnbpaEsMuMhleF">Podcast</a>
+                        </li>
+                        <li><a
+                                href="https://youtube.com/playlist?list=PL-292yfpAFGaEvWiemgUYaJ0wX_n7l6Br&si=uc4VCSG4QFGDftCc">Anthems</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Explore Section -->
+                <div class="footer-section col-lg-3 col-md-3 col-6 mb-4">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="athlete.html">Athletes</a></li>
+                        <li><a href="games">Sports</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <!-- App Links Section -->
+                <div>
+                    <a href="#"><img
+                            src="https://cdn.freebiesupply.com/logos/thumbs/2x/available-on-the-app-store-logo.png"
+                            alt="Apple Store"></a>
+                    <a href="#"><img
+                            src="https://static.wikia.nocookie.net/pbs-kids-sprout-tv/images/d/db/Share_google_play_logo.png"
+                            alt="Google Play"></a>
+                </div>
+
+                <!-- Legal Links Section -->
+                <div class="mb-3">
+                    <a href="https://www.specialolympics.org/privacy-and-data-security-policy">Privacy Policy</a>
+                    <a href="https://www.olympics.com/en/terms-of-service">Terms of Service</a>
+                </div>
+
+                <!-- Social Icons Section -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/olympics/" class="fab fa-facebook-f"></a>
+                    <a href="https://x.com/olympics?lang=en" class="fab fa-twitter"></a>
+                    <a href="https://www.instagram.com/olympics/?hl=en" class="fab fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@olympics?lang=en" class="fab fa-tiktok"></a>
+                    <a href="https://www.youtube.com/olympics" class="fab fa-youtube"></a>
+                    <a href="https://www.snapchat.com/add/olympics" class="fab fa-snapchat"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- <script src="/js/main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            if (!this.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            this.classList.add('was-validated');
+        });
+
+        function sendMail() {
+            var params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            };
+            const serviceID = "service_51o96e7";
+            const templateID = "template_3jr0yff";
+
+            emailjs.send(serviceID, templateID, params)
+                .then(
+                    res => {
+                        document.getElementById("name").value = "";
+                        document.getElementById("email").value = "";
+                        document.getElementById("message").value = "";
+                        console.log(res);
+                        alert("Your Message Send Successfully");
+                    }
+                )
+                .catch((err) => console.log(err));
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
+            const sidebar = document.getElementById('sidebar_menu');
+            const content = document.getElementById('content');
+            const overlay = document.getElementById('overlay');
+
+            // Function to toggle sidebar and overlay
+            function toggleSidebar() {
+                sidebar.classList.toggle('active');
+                content.classList.toggle('blur');
+                overlay.classList.toggle('active');
+            }
+
+            // Function to close sidebar and overlay
+            function closeSidebar() {
+                sidebar.classList.remove('active');
+                content.classList.remove('blur');
+                overlay.classList.remove('active');
+            }
+
+            // Sidebar toggle event listener
+            sidebarToggleBtn.addEventListener('click', toggleSidebar);
+
+            // Close sidebar on close button click
+            const closeBtn = document.querySelector('.toggle-sidebar');
+            closeBtn.addEventListener('click', closeSidebar);
+
+            // Close sidebar when clicking on the overlay
+            overlay.addEventListener('click', closeSidebar);
+        });
+    </script>
+</body>
+
+</html>

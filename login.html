@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <!-- Add Boxicons CDN -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background: url(https://kutv.com/resources/media/8f3bac05-080a-462a-b10e-f00b0206723e-originalBlur_AP24137251839130.jpg);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 255, 0.267), rgba(255, 255, 0, 0.24), rgba(0, 0, 0, 0.267), rgba(0, 128, 0, 0.199), rgba(255, 0, 0, 0.26));
+            filter: blur(1px);
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.555);
+            width: 500px;
+            height: 600px;
+            padding: 40px;
+            border-radius: 16px;
+            border: solid 5px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(25px);
+            box-shadow: 0px 0px 30px 20px rgba(0, 0, 0, 0.1);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0px 0px 40px 25px rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .login-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .input-box {
+            display: flex;
+            width: 100%;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 15px 20px 15px 50px;
+            border-radius: 99px;
+            border: solid 3px transparent;
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            caret-color: white;
+            transition: 0.25s;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+
+        .input-box input:focus {
+            border: solid 3px rgba(255, 255, 255, 0.25);
+        }
+
+        .input-box input::placeholder {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1rem;
+        }
+
+        .input-box i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 20px;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 20px;
+            transition: 0.25s;
+        }
+
+        .input-box input:focus+i {
+            color: white;
+        }
+
+        .remember-forgot-box {
+            display: flex;
+            width: 100%;
+            margin-top: 16px;
+            justify-content: space-between;
+            font-size: 1rem;
+        }
+
+        .remember-me {
+            display: flex;
+            gap: 8px;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .login-button {
+            width: 100%;
+            margin-top: 24px;
+            padding: 20px;
+            background: #32CDD5;
+            border: none;
+            border-radius: 99px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            cursor: pointer;
+            outline: transparent 3px solid;
+            transition: all 0.3s ease;
+        }
+
+        .login-button:hover {
+            background: #28a9af;
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .dont-have-an-account {
+            font-weight: normal;
+            font-size: 1rem;
+        }
+
+        .dont-have-an-account a {
+            color: #32CDD5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .dont-have-an-account a:hover {
+            text-decoration: underline;
+            color: #28a9af;
+        }
+
+       
+
+        @media (max-width: 768px) {
+            .container {
+                width: clamp(300px, 90%, 350px);
+                /* Avoid shrinking too much */
+                padding: 20px;
+            }
+
+            .login-title {
+                font-size: clamp(1.5rem, 4vw, 1.8rem);
+            }
+
+            .input-box input {
+                padding: 10px 15px 10px 40px;
+                font-size: 0.95rem;
+            }
+
+            .login-button {
+                padding: 14px;
+                font-size: 0.95rem;
+            }
+
+            .remember-forgot-box {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .dont-have-an-account {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: clamp(280px, 90%, 300px);
+                /* Maintain usability on small screens */
+                padding: 15px;
+            }
+
+            .login-title {
+                font-size: clamp(1.2rem, 5vw, 1.5rem);
+            }
+
+            .input-box input {
+                font-size: 0.9rem;
+                padding: 8px 10px 8px 35px;
+            }
+
+            .login-button {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+
+            .dont-have-an-account a {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("Fy5JEFcjMC0IgGU9Z");
+        })();
+    </script>
+</head>
+
+
+<body>
+    <div class="background"></div>
+    <form class="container content" id="loginForm">
+        <h1 class="login-title">Login</h1>
+        <section class="input-box">
+            <input type="email" id="email" placeholder="Email" required>
+            <i class="bx bxs-user"></i>
+        </section>
+        <section class="input-box">
+            <input type="password" id="password" placeholder="Password" required>
+            <i class="bx bxs-lock-alt"></i>
+        </section>
+        <section class="remember-forgot-box">
+            <div class="remember-me">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <a class="forgot-password" href="#">Forgot password?</a>
+        </section>
+        <button class="login-button" type="submit">Login</button>
+        <h5 class="dont-have-an-account">Don't have an account? <a href="signin.html">Register</a></h5>
+    </form>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            // Retrieve user details from localStorage
+            const storedUser = JSON.parse(localStorage.getItem("user"));
+
+            if (!storedUser) {
+                alert("No user found. Please sign up first.");
+                return;
+            }
+
+
+            if (email === storedUser.email && password === storedUser.password) {
+                alert("Login successful!");
+                window.location.href = "index.html";
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        });
+    </script>
+
+
+</body>
+
+
+</html>
